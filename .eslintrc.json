@@ -9,8 +9,102 @@
     "plugin:prettier/recommended",
     "plugin:tailwindcss/recommended"
   ],
-  "plugins": ["prettier"],
+  "plugins": [
+    "prettier",
+    "simple-import-sort",
+    "@typescript-eslint/eslint-plugin"
+  ],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": [
+      "error",
+      {
+        "bracketSameLine": false,
+        "printWidth": 70
+      },
+      {
+        "usePrettierrc": true
+      }
+    ],
+    "react/jsx-max-props-per-line": ["error", {
+      "maximum": { "single": 3, "multi": 3}
+    }],
+    "react/jsx-no-useless-fragment": [
+      "warn",
+      {
+        "max": 2
+      }
+    ],
+    "react/hook-use-state": ["error", { "allowDestructuredState": true }],
+    "react/forbid-elements": [
+      1,
+      {
+        "forbid": [
+          {
+            "element": "a",
+            "message": "Use the <Link> or <NavLink> component instead of <a>."
+          }
+        ]
+      }
+    ],
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          [
+            "(?!.*\\.css)^\\u0000"
+          ],
+          [
+            "^@?[a-z]"
+          ],
+          [
+            "^[^.]"
+          ],
+          [
+            "^\\..+(?!\\.css)"
+          ],
+          [
+            ".+\\.css"
+          ]
+        ]
+      }
+    ],
+    "react/jsx-sort-props": ["warn", {
+      "callbacksLast": true,
+      "shorthandFirst": true,
+      "multiline": "last",
+      "ignoreCase": true,
+      "noSortAlphabetically": true,
+      "reservedFirst": true,
+      "locale": "auto"
+    }],
+    "react/jsx-no-leaked-render": ["error", {
+      "validStrategies": ["ternary", "coerce"]
+    }],
+    "react/no-string-refs": ["error", {"noTemplateLiterals": true}],
+    "simple-import-sort/exports": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/comma-spacing": "error",
+    "react/self-closing-comp": "warn",
+    "react/no-multi-comp": "error",
+    "react/no-this-in-sfc": "error",
+    "react/no-children-prop": "error",
+    "react/jsx-tag-spacing": "warn",
+    "react/no-unused-state": "warn",
+    "react/no-array-index-key": "warn",
+    "react/jsx-boolean-value": "warn",
+    "react/jsx-no-duplicate-props": "error",
+    "react/destructuring-assignment": ["warn", "always"],
+    "no-var": "warn",
+    "react/no-deprecated": "warn",
+    "no-undef": "warn",
+    "no-unreachable": "error",
+    "no-unused-vars": "warn",
+    "no-console": "error",
+    "no-await-in-loop": "error",
+    "no-const-assign": "error"
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest"
   }
 }

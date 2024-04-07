@@ -1,18 +1,19 @@
 'use client';
 
-import NavLink from '@/app/components/NavLink';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import NavLink from '@/app/components/NavLink';
 
 const Header = () => {
   return (
     <header className="mx-auto flex max-w-1920 justify-between px-[150px] py-10">
       <Image
+        priority
         src="/logo.svg"
         alt="Dajavshne Logo"
         width={250}
         height={40}
-        priority
       />
       <nav>
         <ul className="flex gap-x-12">

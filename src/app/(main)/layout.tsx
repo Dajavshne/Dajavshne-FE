@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { ReactNode } from 'react';
+
 import Header from './components/Header';
 
 export const metadata: Metadata = {
@@ -9,12 +11,14 @@ export const metadata: Metadata = {
 export default function MainLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <>
-      <Header></Header>
-      <main className="mx-auto max-w-1920 px-[150px]">{children}</main>
+      <Header />
+      <main className="mx-auto max-w-1920 px-[150px]">
+        {children}
+      </main>
     </>
   );
 }

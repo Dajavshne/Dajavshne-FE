@@ -6,15 +6,16 @@ import { twMerge } from 'tailwind-merge';
 const NavLink = (props: LinkProps & { children?: ReactNode }) => {
   const currentPath = usePathname();
   const { href, children } = props;
-  const isActive = currentPath === href;
+  const active = currentPath === href;
 
   return (
     <Link
       {...props}
       className={twMerge(
         'hover:text-primary',
-        isActive && 'font-bold text-primary'
-      )}>
+        active && 'font-bold text-primary'
+      )}
+    >
       {children}
     </Link>
   );
