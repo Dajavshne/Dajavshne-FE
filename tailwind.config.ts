@@ -9,7 +9,10 @@ const config: Config = {
       },
       colors: {
         white: '#ffffff',
-        primary: '#295845',
+        primary: '#0F5A42',
+      },
+      padding: {
+        desktop: '150px',
       },
     },
   },

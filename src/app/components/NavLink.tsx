@@ -13,7 +13,7 @@ const NavLink = (props: LinkProps & { children?: ReactNode }) => {
       {...props}
       className={twMerge(
         'hover:text-primary',
-        active && 'font-bold text-primary'
+        active && 'font-bold text-primary',
       )}
     >
       {children}

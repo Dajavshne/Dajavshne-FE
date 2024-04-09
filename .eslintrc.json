@@ -19,7 +19,7 @@
       "error",
       {
         "bracketSameLine": false,
-        "printWidth": 70
+        "printWidth": 80
       },
       {
         "usePrettierrc": true
@@ -77,9 +77,6 @@
       "reservedFirst": true,
       "locale": "auto"
     }],
-    "react/jsx-no-leaked-render": ["error", {
-      "validStrategies": ["ternary", "coerce"]
-    }],
     "react/no-string-refs": ["error", {"noTemplateLiterals": true}],
     "simple-import-sort/exports": "error",
     "@typescript-eslint/no-explicit-any": "error",
@@ -101,7 +98,8 @@
     "no-unused-vars": "warn",
     "no-console": "error",
     "no-await-in-loop": "error",
-    "no-const-assign": "error"
+    "no-const-assign": "error",
+    "tailwindcss/classnames-order": "off"
   },
   "parserOptions": {
     "sourceType": "module",
