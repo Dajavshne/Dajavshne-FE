@@ -19,7 +19,7 @@
       "error",
       {
         "bracketSameLine": false,
-        "printWidth": 80
+        "printWidth": 100
       },
       {
         "usePrettierrc": true
@@ -79,7 +79,7 @@
     }],
     "react/no-string-refs": ["error", {"noTemplateLiterals": true}],
     "simple-import-sort/exports": "error",
-    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/comma-spacing": "error",
     "react/self-closing-comp": "warn",
     "react/no-multi-comp": "error",

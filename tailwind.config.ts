@@ -14,6 +14,9 @@ const config: Config = {
       padding: {
         desktop: '150px',
       },
+      overflow: {
+        overlay: 'overlay',
+      },
     },
   },
   plugins: [],

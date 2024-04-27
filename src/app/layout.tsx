@@ -1,5 +1,6 @@
 import { Open_Sans } from 'next/font/google';
 import { ReactNode } from 'react';
+import { twJoin } from 'tailwind-merge';
 
 import './globals.css';
 
@@ -14,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={twJoin(inter.className, 'w-screen overflow-x-hidden')}>{children}</body>
     </html>
   );
 }

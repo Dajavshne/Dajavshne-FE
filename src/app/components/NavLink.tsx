@@ -9,13 +9,7 @@ const NavLink = (props: LinkProps & { children?: ReactNode }) => {
   const active = currentPath === href;
 
   return (
-    <Link
-      {...props}
-      className={twMerge(
-        'hover:text-primary',
-        active && 'font-bold text-primary',
-      )}
-    >
+    <Link {...props} className={twMerge('hover:text-primary', active && 'font-bold text-primary')}>
       {children}
     </Link>
   );

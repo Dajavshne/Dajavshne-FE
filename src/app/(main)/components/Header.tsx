@@ -7,6 +7,7 @@ import { createPortal } from 'react-dom';
 import { twJoin } from 'tailwind-merge';
 
 import BurgerIcon from '@/app/components/BurgerIcon';
+import Button from '@/app/components/Button';
 import CloseIcon from '@/app/components/CloseIcon';
 import NavLink from '@/app/components/NavLink';
 import useWindowSize from '@/app/hooks/useWindowSize';
@@ -65,12 +66,9 @@ const Header = () => {
         <Link className="text-center text-sm font-semibold" href={'/sign-in'}>
           Sign in
         </Link>
-        <Link
-          className="rounded bg-primary p-5 text-center text-sm font-bold text-white"
-          href={'/register'}
-        >
+        <Button type="link" to="/register" classes="">
           Create account
-        </Link>
+        </Button>
       </>
     );
   };
@@ -94,9 +92,7 @@ const Header = () => {
           >
             <CloseIcon onClick={toggleMenu} />
             <nav className="mt-6">{renderMenu()}</nav>
-            <div className="mt-12 flex flex-col-reverse gap-y-4">
-              {renderAccountControls()}
-            </div>
+            <div className="mt-12 flex flex-col-reverse gap-y-4">{renderAccountControls()}</div>
           </div>
         </div>,
         document.body,
@@ -105,14 +101,12 @@ const Header = () => {
   };
 
   return (
-    <header className="2xl:px-desktop mx-auto flex max-w-1920 items-center justify-between px-4 py-5 md:px-12 lg:py-10">
+    <header className="mx-auto flex max-w-1920 items-center justify-between px-4 py-5 md:px-12 lg:py-10 2xl:px-desktop">
       {renderLogo()}
       <BurgerIcon onClick={toggleMenu} />
       {isDesktopMenu && <nav>{renderMenu()}</nav>}
       {isDesktopMenu && (
-        <div className="flex items-center justify-center gap-6">
-          {renderAccountControls()}
-        </div>
+        <div className="flex items-center justify-center gap-6">{renderAccountControls()}</div>
       )}
       {renderMenuOverlay()}
     </header>

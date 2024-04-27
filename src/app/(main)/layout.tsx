@@ -16,9 +16,7 @@ export default function MainLayout({
   return (
     <>
       <Header />
-      <main className="px-desktop mx-auto max-w-1920">
-        {children}
-      </main>
+      <main className="mx-auto max-w-1920 px-4 md:px-16 2xl:px-desktop">{children}</main>
     </>
   );
 }
