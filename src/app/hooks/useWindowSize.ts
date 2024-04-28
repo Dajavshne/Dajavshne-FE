@@ -7,7 +7,7 @@ interface WindowSizeTypes {
 
 const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState<WindowSizeTypes>({
-    width: 0,
+    width: 1024,
     height: 0,
   });
 

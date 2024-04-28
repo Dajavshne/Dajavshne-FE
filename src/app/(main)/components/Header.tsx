@@ -8,7 +8,6 @@ import { twJoin } from 'tailwind-merge';
 
 import BurgerIcon from '@/app/components/BurgerIcon';
 import Button from '@/app/components/Button';
-import CloseIcon from '@/app/components/CloseIcon';
 import NavLink from '@/app/components/NavLink';
 import useWindowSize from '@/app/hooks/useWindowSize';
 
@@ -80,17 +79,16 @@ const Header = () => {
       isOverlayVisible &&
       createPortal(
         <div
-          className="absolute left-0 top-0 size-full bg-black/15 backdrop-blur-sm"
+          className="fixed left-0 top-0 size-full bg-black/15 backdrop-blur-sm"
           onClick={toggleMenu}
         >
           <div
             className={twJoin(
-              'flex h-full w-[264px] flex-col bg-white px-4 py-8 transition-all duration-300',
-              !isMenuOpened && '-translate-x-full',
+              'absolute right-0 flex h-full w-[264px] flex-col bg-white px-4 py-8 transition-all duration-300',
+              !isMenuOpened && 'translate-x-full',
             )}
             onClick={(e) => e.stopPropagation()}
           >
-            <CloseIcon onClick={toggleMenu} />
             <nav className="mt-6">{renderMenu()}</nav>
             <div className="mt-12 flex flex-col-reverse gap-y-4">{renderAccountControls()}</div>
           </div>
@@ -101,12 +99,14 @@ const Header = () => {
   };
 
   return (
-    <header className="mx-auto flex max-w-1920 items-center justify-between px-4 py-5 md:px-12 lg:py-10 2xl:px-desktop">
+    <header className="mx-auto flex max-w-1920 items-center justify-between px-4 py-5 md:px-6 lg:py-10 2xl:px-desktop">
       {renderLogo()}
-      <BurgerIcon onClick={toggleMenu} />
-      {isDesktopMenu && <nav>{renderMenu()}</nav>}
+      {!isDesktopMenu && <BurgerIcon isTransformed={isMenuOpened} onClick={toggleMenu} />}
+      {isDesktopMenu && <nav className="hidden lg:block">{renderMenu()}</nav>}
       {isDesktopMenu && (
-        <div className="flex items-center justify-center gap-6">{renderAccountControls()}</div>
+        <div className=" hidden items-center justify-center gap-6 lg:flex">
+          {renderAccountControls()}
+        </div>
       )}
       {renderMenuOverlay()}
     </header>
