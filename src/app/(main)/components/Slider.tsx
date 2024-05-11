@@ -46,7 +46,8 @@ const Slider = () => {
     originalContent[0],
   ];
   const sliderWidth = `${content.length * 100}%`;
-  const disableTransition = activeSlide === content.length - 1 || activeSlide === 0;
+  const disableTransition =
+    activeSlide === content.length - 1 || activeSlide === 0;
 
   const changeSlide = useCallback(() => {
     if (activeSlide >= content.length - 1) {
@@ -67,14 +68,20 @@ const Slider = () => {
 
     _.debounce(() => setIsChangeable(true), disableTransition ? 700 : 0)();
 
-    if (disableTransition && sliderRef.current?.classList.contains('duration-700')) {
+    if (
+      disableTransition &&
+      sliderRef.current?.classList.contains('duration-700')
+    ) {
       _.debounce(() => {
         sliderRef.current?.classList.remove('duration-700');
         changeSlide();
       }, 700)();
     }
 
-    if (!disableTransition && !sliderRef.current?.classList.contains('duration-700')) {
+    if (
+      !disableTransition &&
+      !sliderRef.current?.classList.contains('duration-700')
+    ) {
       _.debounce(() => {
         sliderRef.current?.classList.add('duration-700');
       }, 30)();
@@ -124,7 +131,9 @@ const Slider = () => {
                     <p className="max-w-[708px] text-xl font-bold xl:text-[40px] xl:leading-[48px]">
                       {bigText}
                     </p>
-                    <p className="mt-3 max-w-[436px] text-sm leading-[26px]">{smallText}</p>
+                    <p className="mt-3 max-w-[436px] text-sm leading-[26px]">
+                      {smallText}
+                    </p>
                     <Button type="link" to="/" classes="mt-8">
                       Book now
                     </Button>
@@ -138,8 +147,10 @@ const Slider = () => {
           {originalContent.map((_, index) => {
             const isActive =
               index === activeSlide - 1 ||
-              ((activeSlide === 0 || activeSlide === content.length - 1) && index === 0) ||
-              (activeSlide >= content.length - 3 && index === originalContent.length - 100);
+              ((activeSlide === 0 || activeSlide === content.length - 1) &&
+                index === 0) ||
+              (activeSlide >= content.length - 3 &&
+                index === originalContent.length - 100);
 
             return (
               <div

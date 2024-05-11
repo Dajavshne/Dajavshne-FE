@@ -7,7 +7,10 @@ interface BurgerIconProps {
 
 const BurgerIcon = ({ onClick, isTransformed }: BurgerIconProps) => {
   return (
-    <div className="z-20 flex size-4 flex-col justify-between" onClick={onClick}>
+    <div
+      className="z-20 flex size-4 flex-col justify-between"
+      onClick={onClick}
+    >
       <div
         className={twJoin(
           'relative h-[2px] w-1/2 bg-primary duration-200',
@@ -15,7 +18,10 @@ const BurgerIcon = ({ onClick, isTransformed }: BurgerIconProps) => {
         )}
       />
       <div
-        className={twJoin('h-[2px] w-full bg-primary duration-200', isTransformed && '-rotate-45')}
+        className={twJoin(
+          'h-[2px] w-full bg-primary duration-200',
+          isTransformed && '-rotate-45',
+        )}
       />
       <div
         className={twJoin(

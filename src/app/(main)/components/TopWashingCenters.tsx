@@ -8,7 +8,9 @@ const TopWashingCenters = () => {
   return (
     <section className="mt-6 xl:mt-[72px]">
       <div className="flex items-center justify-between px-4 md:px-6 2xl:px-desktop">
-        <h3 className="text-lg font-bold md:text-[28px] md:leading-10">Top washing centers</h3>
+        <h3 className="text-lg font-bold md:text-[28px] md:leading-10">
+          Top washing centers
+        </h3>
         <Link className="text-blue text-xs font-bold md:text-base" href={'/'}>
           See all
         </Link>
@@ -24,9 +26,14 @@ const TopWashingCenters = () => {
             />
             <div className="px-4 pt-4">
               <div className="flex items-center justify-between">
-                <p className="text-base font-bold md:text-xl">Saburtalo car-wash</p>
+                <p className="text-base font-bold md:text-xl">
+                  Saburtalo car-wash
+                </p>
                 <div className="flex items-center gap-3">
-                  <StarIcon className="size-5 md:size-6" percent={(2.5 / 5) * 100} />
+                  <StarIcon
+                    className="size-5 md:size-6"
+                    percent={(2.5 / 5) * 100}
+                  />
                   <p className="text-base font-bold md:text-xl">2.5</p>
                 </div>
               </div>
@@ -50,9 +57,14 @@ const TopWashingCenters = () => {
             />
             <div className="px-4 pt-4">
               <div className="flex items-center justify-between">
-                <p className="text-base font-bold md:text-xl">Gldani car-wash</p>
+                <p className="text-base font-bold md:text-xl">
+                  Gldani car-wash
+                </p>
                 <div className="flex items-center gap-3">
-                  <StarIcon className="size-5 md:size-6" percent={(3.0 / 5) * 100} />
+                  <StarIcon
+                    className="size-5 md:size-6"
+                    percent={(3.0 / 5) * 100}
+                  />
                   <p className="text-base font-bold md:text-xl">3.0</p>
                 </div>
               </div>
@@ -78,7 +90,10 @@ const TopWashingCenters = () => {
               <div className="flex items-center justify-between">
                 <p className="text-base font-bold md:text-xl">Vera car-wash</p>
                 <div className="flex items-center gap-3">
-                  <StarIcon className="size-5 md:size-6" percent={(1.7 / 5) * 100} />
+                  <StarIcon
+                    className="size-5 md:size-6"
+                    percent={(1.7 / 5) * 100}
+                  />
                   <p className="text-base font-bold md:text-xl">1.7</p>
                 </div>
               </div>
@@ -102,9 +117,14 @@ const TopWashingCenters = () => {
             />
             <div className="px-4 pt-4">
               <div className="flex items-center justify-between">
-                <p className="text-base font-bold md:text-xl">Mtkvari car-wash</p>
+                <p className="text-base font-bold md:text-xl">
+                  Mtkvari car-wash
+                </p>
                 <div className="flex items-center gap-3">
-                  <StarIcon className="size-5 md:size-6" percent={(4.5 / 5) * 100} />
+                  <StarIcon
+                    className="size-5 md:size-6"
+                    percent={(4.5 / 5) * 100}
+                  />
                   <p className="text-base font-bold md:text-xl">4.5</p>
                 </div>
               </div>

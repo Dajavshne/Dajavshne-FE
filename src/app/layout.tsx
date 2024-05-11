@@ -15,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={twJoin(inter.className, 'w-screen overflow-x-hidden')}>{children}</body>
+      <body className={twJoin(inter.className, 'w-screen overflow-x-hidden')}>
+        {children}
+      </body>
     </html>
   );
 }

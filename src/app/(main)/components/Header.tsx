@@ -90,7 +90,9 @@ const Header = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <nav className="mt-6">{renderMenu()}</nav>
-            <div className="mt-12 flex flex-col-reverse gap-y-4">{renderAccountControls()}</div>
+            <div className="mt-12 flex flex-col-reverse gap-y-4">
+              {renderAccountControls()}
+            </div>
           </div>
         </div>,
         document.body,
@@ -101,7 +103,9 @@ const Header = () => {
   return (
     <header className="mx-auto flex max-w-1920 items-center justify-between px-4 py-5 md:px-6 lg:py-10 2xl:px-desktop">
       {renderLogo()}
-      {!isDesktopMenu && <BurgerIcon isTransformed={isMenuOpened} onClick={toggleMenu} />}
+      {!isDesktopMenu && (
+        <BurgerIcon isTransformed={isMenuOpened} onClick={toggleMenu} />
+      )}
       {isDesktopMenu && <nav className="hidden lg:block">{renderMenu()}</nav>}
       {isDesktopMenu && (
         <div className=" hidden items-center justify-center gap-6 lg:flex">

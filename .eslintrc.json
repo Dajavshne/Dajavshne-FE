@@ -18,8 +18,7 @@
     "prettier/prettier": [
       "error",
       {
-        "bracketSameLine": false,
-        "printWidth": 100
+        "bracketSameLine": false
       },
       {
         "usePrettierrc": true
