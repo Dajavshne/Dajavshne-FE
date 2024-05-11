@@ -1,5 +1,11 @@
-import Slider from '../components/Slider';
+import Slider from './components/Slider';
+import TopWashingCenters from './components/TopWashingCenters';
 
 export default function Home() {
-  return <Slider />;
+  return (
+    <>
+      <Slider />
+      <TopWashingCenters />
+    </>
+  );
 }

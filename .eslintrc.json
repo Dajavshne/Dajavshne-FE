@@ -25,9 +25,6 @@
         "usePrettierrc": true
       }
     ],
-    "react/jsx-max-props-per-line": ["error", {
-      "maximum": { "single": 3, "multi": 3}
-    }],
     "react/jsx-no-useless-fragment": [
       "warn",
       {

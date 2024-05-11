@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { twJoin } from 'tailwind-merge';
 
-import Button from './Button';
+import Button from '@/app/components/Button';
 
 const originalContent = [
   {
@@ -100,60 +100,62 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative mt-8 overflow-hidden rounded-xl">
-      <div
-        ref={sliderRef}
-        className="relative flex duration-700"
-        style={{ width: sliderWidth, left: `calc(-${activeSlide} * 100%)` }}
-      >
-        {content.map(({ imageSrc, bigText, smallText }, index) => {
-          return (
-            <div key={index} className="relative w-full">
-              <Image
-                priority
-                src={imageSrc}
-                alt="slide"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="h-[314px] w-full object-cover md:h-96 xl:h-[540px]"
-              />
-              <div className="absolute left-0 top-0 flex size-full flex-col justify-between pl-4 pr-8 pt-6 text-white md:pl-8 md:pt-10 xl:px-12 xl:pt-[138px]">
-                <div>
-                  <p className="max-w-[708px] text-xl font-bold xl:text-[40px] xl:leading-[48px]">
-                    {bigText}
-                  </p>
-                  <p className="mt-3 max-w-[436px] text-sm leading-[26px]">{smallText}</p>
-                  <Button type="link" to="/" classes="mt-8">
-                    Book now
-                  </Button>
+    <section className="px-4 md:px-6 2xl:px-desktop">
+      <div className="relative mt-8 overflow-hidden rounded-xl">
+        <div
+          ref={sliderRef}
+          className="relative flex duration-700"
+          style={{ width: sliderWidth, left: `calc(-${activeSlide} * 100%)` }}
+        >
+          {content.map(({ imageSrc, bigText, smallText }, index) => {
+            return (
+              <div key={index} className="relative w-full">
+                <Image
+                  priority
+                  src={imageSrc}
+                  alt="slide"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="h-[314px] w-full object-cover md:h-96 xl:h-[540px]"
+                />
+                <div className="absolute left-0 top-0 flex size-full flex-col justify-between pl-4 pr-8 pt-6 text-white md:pl-8 md:pt-10 xl:px-12 xl:pt-[138px]">
+                  <div>
+                    <p className="max-w-[708px] text-xl font-bold xl:text-[40px] xl:leading-[48px]">
+                      {bigText}
+                    </p>
+                    <p className="mt-3 max-w-[436px] text-sm leading-[26px]">{smallText}</p>
+                    <Button type="link" to="/" classes="mt-8">
+                      Book now
+                    </Button>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-      <div className="absolute bottom-4 left-0 flex w-full justify-center gap-2">
-        {originalContent.map((_, index) => {
-          const isActive =
-            index === activeSlide - 1 ||
-            ((activeSlide === 0 || activeSlide === content.length - 1) && index === 0) ||
-            (activeSlide >= content.length - 3 && index === originalContent.length - 100);
+            );
+          })}
+        </div>
+        <div className="absolute bottom-4 left-0 flex w-full justify-center gap-2">
+          {originalContent.map((_, index) => {
+            const isActive =
+              index === activeSlide - 1 ||
+              ((activeSlide === 0 || activeSlide === content.length - 1) && index === 0) ||
+              (activeSlide >= content.length - 3 && index === originalContent.length - 100);
 
-          return (
-            <div
-              key={index}
-              className={twJoin(
-                'h-1 cursor-pointer rounded-[4px] duration-300',
-                !isActive && 'w-6 bg-white/50',
-                isActive && 'w-10 bg-white',
-              )}
-              onClick={() => goToSlide(index + 1)}
-            />
-          );
-        })}
+            return (
+              <div
+                key={index}
+                className={twJoin(
+                  'h-1 cursor-pointer rounded-[4px] duration-300',
+                  !isActive && 'w-6 bg-white/50',
+                  isActive && 'w-10 bg-white',
+                )}
+                onClick={() => goToSlide(index + 1)}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
