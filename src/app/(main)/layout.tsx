@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 
+import Footer from './components/Footer';
 import Header from './components/Header';
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function MainLayout({
     <>
       <Header />
       <main className="mx-auto max-w-1920">{children}</main>
+      <Footer />
     </>
   );
 }

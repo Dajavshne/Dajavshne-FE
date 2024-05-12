@@ -10,7 +10,7 @@ const AboutUs = () => {
           width={802}
           height={581}
           alt="Car washing"
-          className="mt-4 w-full rounded-10 lg:mt-0"
+          className="mt-4 w-full rounded-10 lg:mt-0 lg:w-3/5"
         />
         <div>
           <h3 className="hidden lg:block">About us</h3>

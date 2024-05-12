@@ -8,7 +8,7 @@ interface BurgerIconProps {
 const BurgerIcon = ({ onClick, isTransformed }: BurgerIconProps) => {
   return (
     <div
-      className="z-20 flex size-4 flex-col justify-between"
+      className="z-10 flex size-4 flex-col justify-between"
       onClick={onClick}
     >
       <div

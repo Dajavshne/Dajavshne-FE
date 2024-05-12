@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -10,6 +9,7 @@ import BurgerIcon from '@/app/components/BurgerIcon';
 import Button from '@/app/components/Button';
 import NavLink from '@/app/components/NavLink';
 import useWindowSize from '@/app/hooks/useWindowSize';
+import LogoIcon from '@/icons/LogoIcon';
 
 const Header = () => {
   const [isOverlayVisible, setIsOverlayVisible] = useState<boolean>(false);
@@ -28,14 +28,7 @@ const Header = () => {
   const renderLogo = () => {
     return (
       <Link href="/">
-        <Image
-          priority
-          src="/logo.svg"
-          alt="Dajavshne Logo"
-          width={127}
-          height={20}
-          className="md:h-auto md:w-[200px]"
-        />
+        <LogoIcon className="h-5 w-[127px] lg:h-auto lg:w-52" />
       </Link>
     );
   };

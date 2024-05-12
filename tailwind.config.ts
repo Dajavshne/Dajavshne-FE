@@ -12,6 +12,7 @@ const config: Config = {
         primary: '#0F5A42',
         blue: 'rgb(43, 174, 218)',
         gray: 'rgb(120, 134, 149)',
+        beige: '#F0E7D6',
       },
       margin: {
         18: '72px',
