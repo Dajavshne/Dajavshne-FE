@@ -11,10 +11,10 @@ const StarIcon = ({ className, percent }: StarIconProps) => {
     <svg height="24" viewBox="0 0 24 24" width="24" className={className}>
       <defs>
         <linearGradient id={randomNumber}>
-          <stop offset="0%" stop-color="#FFC670" />
-          <stop offset={`${percent}%`} stop-color="#FFC670" />
-          <stop offset={`${percent}%`} stop-color="gray" />
-          <stop offset="100%" stop-color="gray" />
+          <stop offset="0%" stopColor="#FFC670" />
+          <stop offset={`${percent}%`} stopColor="#FFC670" />
+          <stop offset={`${percent}%`} stopColor="gray" />
+          <stop offset="100%" stopColor="gray" />
         </linearGradient>
       </defs>
       <path

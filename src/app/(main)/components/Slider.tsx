@@ -134,7 +134,7 @@ const Slider = () => {
                     <p className="mt-3 max-w-[436px] text-sm leading-[26px]">
                       {smallText}
                     </p>
-                    <Button type="link" to="/" classes="mt-8">
+                    <Button type="link" to="/" className="mt-8">
                       Book now
                     </Button>
                   </div>

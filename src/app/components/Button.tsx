@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 interface ButtonBaseProps {
-  classes?: string;
+  className?: string;
   children: ReactNode;
 }
 
@@ -19,7 +19,7 @@ interface LinkButtonProps extends ButtonBaseProps {
 }
 
 const Button = (props: ButtonProps | LinkButtonProps) => {
-  const { classes, children, type } = props;
+  const { className, children, type } = props;
 
   if (type === 'link') {
     const { to } = props;
@@ -29,7 +29,7 @@ const Button = (props: ButtonProps | LinkButtonProps) => {
         href={to}
         className={twMerge(
           'inline-block rounded bg-primary p-5 text-center text-sm font-bold text-white',
-          classes,
+          className,
         )}
       >
         {children}
@@ -37,7 +37,17 @@ const Button = (props: ButtonProps | LinkButtonProps) => {
     );
   }
 
-  return null;
+  return (
+    <button
+      type="button"
+      className={twMerge(
+        'inline-block rounded bg-primary p-5 text-center text-sm font-bold text-white',
+        className,
+      )}
+    >
+      {children}
+    </button>
+  );
 };
 
 export default Button;

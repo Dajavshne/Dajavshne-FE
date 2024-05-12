@@ -65,7 +65,7 @@ const Header = () => {
         <Link className="text-center text-sm font-semibold" href={'/sign-in'}>
           Sign in
         </Link>
-        <Button type="link" to="/register" classes="">
+        <Button type="link" to="/register">
           Create account
         </Button>
       </>

@@ -11,6 +11,7 @@ const config: Config = {
         white: '#ffffff',
         primary: '#0F5A42',
         blue: 'rgb(43, 174, 218)',
+        gray: 'rgb(120, 134, 149)',
       },
       padding: {
         desktop: '150px',
@@ -18,10 +19,14 @@ const config: Config = {
       overflow: {
         overlay: 'overlay',
       },
-      borderColor: {
-        gray: 'rgb(120, 134, 149)',
+      backgroundColor: {
+        grayishBlue: 'rgb(193, 217, 225)',
+      },
+      backgroundImage: {
+        looper: 'url("/LooperGroup.svg")',
       },
       borderRadius: {
+        4: '4px',
         10: '10px',
       },
     },

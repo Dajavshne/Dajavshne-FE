@@ -8,15 +8,13 @@ const TopWashingCenters = () => {
   return (
     <section className="mt-6 xl:mt-[72px]">
       <div className="flex items-center justify-between px-4 md:px-6 2xl:px-desktop">
-        <h3 className="text-lg font-bold md:text-[28px] md:leading-10">
-          Top washing centers
-        </h3>
-        <Link className="text-blue text-xs font-bold md:text-base" href={'/'}>
+        <h3>Top washing centers</h3>
+        <Link className="text-xs font-bold text-blue md:text-base" href={'/'}>
           See all
         </Link>
       </div>
-      <div className="mb-20 mt-6 flex justify-between gap-4 overflow-auto px-4 md:px-6 2xl:px-desktop">
-        <div className="border-gray/30 rounded-10 flex min-w-[265px] flex-col justify-between overflow-hidden border">
+      <div className="mt-6 flex justify-between gap-4 overflow-auto px-4 md:px-6 2xl:px-desktop">
+        <div className="flex min-w-[265px] flex-col justify-between overflow-hidden rounded-10 border border-gray/30">
           <div>
             <Image
               src={'/images/washing-center.jpeg'}
@@ -42,12 +40,12 @@ const TopWashingCenters = () => {
             </div>
           </div>
           <div className="px-4 pb-4 pt-6">
-            <Button type="link" to="/" classes="w-full">
+            <Button type="link" to="/" className="w-full">
               Book now
             </Button>
           </div>
         </div>
-        <div className="border-gray/30 rounded-10 flex min-w-[265px] flex-col justify-between overflow-hidden border">
+        <div className="flex min-w-[265px] flex-col justify-between overflow-hidden rounded-10 border border-gray/30">
           <div>
             <Image
               src={'/images/washing-center.jpeg'}
@@ -73,12 +71,12 @@ const TopWashingCenters = () => {
             </div>
           </div>
           <div className="px-4 pb-4 pt-6">
-            <Button type="link" to="/" classes="w-full">
+            <Button type="link" to="/" className="w-full">
               Book now
             </Button>
           </div>
         </div>
-        <div className="border-gray/30 rounded-10 flex min-w-[265px] flex-col justify-between overflow-hidden border">
+        <div className="flex min-w-[265px] flex-col justify-between overflow-hidden rounded-10 border border-gray/30">
           <div>
             <Image
               src={'/images/washing-center.jpeg'}
@@ -102,12 +100,12 @@ const TopWashingCenters = () => {
             </div>
           </div>
           <div className="px-4 pb-4 pt-6">
-            <Button type="link" to="/" classes="w-full">
+            <Button type="link" to="/" className="w-full">
               Book now
             </Button>
           </div>
         </div>
-        <div className="border-gray/30 rounded-10 flex min-w-[265px] flex-col justify-between overflow-hidden border">
+        <div className="flex min-w-[265px] flex-col justify-between overflow-hidden rounded-10 border border-gray/30">
           <div>
             <Image
               src={'/images/washing-center.jpeg'}
@@ -133,7 +131,7 @@ const TopWashingCenters = () => {
             </div>
           </div>
           <div className="px-4 pb-4 pt-6">
-            <Button type="link" to="/" classes="w-full">
+            <Button type="link" to="/" className="w-full">
               Book now
             </Button>
           </div>
