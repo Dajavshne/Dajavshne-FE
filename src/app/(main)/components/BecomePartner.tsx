@@ -5,7 +5,7 @@ import Label from '@/app/components/Field/Label';
 
 const BecomePartner = () => {
   return (
-    <section className="bg-grayishBlue/20 lg:bg-looper mt-[72px] bg-right bg-no-repeat px-4 py-6 md:px-6 md:pb-[72px] md:pt-8 2xl:px-desktop">
+    <section className="bg-grayishBlue/20 lg:bg-looper mt-18 md:pb-18 bg-right bg-no-repeat px-4 py-6 md:px-6 md:pt-8 2xl:px-desktop">
       <div className="lg:w-3/5 xl:w-[70%] 2xl:w-4/5">
         <h3>Become partner</h3>
         <div className="mt-6 flex flex-col gap-4 md:flex-row">

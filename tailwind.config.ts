@@ -13,7 +13,11 @@ const config: Config = {
         blue: 'rgb(43, 174, 218)',
         gray: 'rgb(120, 134, 149)',
       },
+      margin: {
+        18: '72px',
+      },
       padding: {
+        18: '72px',
         desktop: '150px',
       },
       overflow: {
