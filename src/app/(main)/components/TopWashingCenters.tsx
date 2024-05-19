@@ -6,7 +6,7 @@ import StarIcon from '@/icons/StarIcon';
 
 const TopWashingCenters = () => {
   return (
-    <section className="xl:mt-18 mt-6">
+    <section className="mx-auto mt-6 max-w-1920 xl:mt-18">
       <div className="flex items-center justify-between px-4 md:px-6 2xl:px-desktop">
         <h3>Top washing centers</h3>
         <Link className="text-xs font-bold text-blue md:text-base" href={'/'}>

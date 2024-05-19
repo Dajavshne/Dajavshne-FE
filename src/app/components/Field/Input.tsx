@@ -15,7 +15,7 @@ const Input = ({
     <input
       {...props}
       className={twMerge(
-        'rounded-4 w-full border border-gray/30 bg-transparent p-3 pt-6 text-sm focus:border-gray/100',
+        'w-full rounded-4 border border-gray/30 bg-transparent p-3 pt-6 text-sm focus:border-gray/100',
         className,
       )}
       onFocus={() => setIsFocused(true)}

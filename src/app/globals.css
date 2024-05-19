@@ -9,3 +9,7 @@ input {
 h3 {
     @apply text-lg font-bold md:text-[28px] md:leading-10;
 }
+
+.splide {
+    visibility: visible !important;
+}
