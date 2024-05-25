@@ -15,7 +15,7 @@ const Label = ({
   return (
     <label
       className={twMerge(
-        'absolute left-3 top-1/2 -translate-y-1/2 text-gray duration-150',
+        'absolute left-3 top-1/2 -translate-y-1/2 cursor-text text-gray duration-150',
         isFocused && 'top-2 translate-y-0 text-xs',
         className,
       )}

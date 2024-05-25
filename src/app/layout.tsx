@@ -4,7 +4,7 @@ import { twJoin } from 'tailwind-merge';
 
 import './globals.css';
 
-const inter = Open_Sans({
+const openSans = Open_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-open-sans',
@@ -25,9 +25,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={twJoin(
-          inter.variable,
+          openSans.variable,
           arimo.variable,
-          inter.className,
+          openSans.className,
           'w-screen overflow-x-hidden',
         )}
       >
