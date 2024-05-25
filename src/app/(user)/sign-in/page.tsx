@@ -1,9 +1,15 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 
 import Button from '@/app/components/Button';
 import Field from '@/app/components/Field/Field';
 import Input from '@/app/components/Field/Input';
 import Label from '@/app/components/Field/Label';
+
+export const metadata: Metadata = {
+  title: 'Sign in',
+  description: 'Sign in and discover more',
+};
 
 export default function SignIn() {
   return (
