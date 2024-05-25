@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="mt-14 text-sm text-beige md:mt-16 lg:text-xl xl:mt-24">
+        <p className="font-arimo mt-14 text-sm text-beige md:mt-16 lg:text-xl xl:mt-24">
           &copy; 2023 DAJAVSHNE. ყველა უფლება დაცულია.{' '}
         </p>
       </div>

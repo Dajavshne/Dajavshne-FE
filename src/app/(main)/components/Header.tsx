@@ -72,7 +72,7 @@ const Header = () => {
       isOverlayVisible &&
       createPortal(
         <div
-          className="fixed left-0 top-0 size-full bg-black/15 backdrop-blur-sm"
+          className="fixed left-0 top-0 z-20 size-full bg-black/15 backdrop-blur-sm"
           onClick={toggleMenu}
         >
           <div
@@ -87,6 +87,9 @@ const Header = () => {
               {renderAccountControls()}
             </div>
           </div>
+          <div className="absolute right-4 top-5 md:right-6">
+            <BurgerIcon isTransformed={isMenuOpened} onClick={toggleMenu} />
+          </div>
         </div>,
         document.body,
       )
@@ -94,7 +97,7 @@ const Header = () => {
   };
 
   return (
-    <header className="mx-auto flex max-w-1920 items-center justify-between px-4 py-5 md:px-6 lg:py-10 2xl:px-desktop">
+    <header className="sticky top-0 z-10 mx-auto flex max-w-1920 items-center justify-between bg-white px-4 py-5 md:px-6 lg:relative lg:py-10 2xl:px-desktop">
       {renderLogo()}
       {!isDesktopMenu && (
         <BurgerIcon isTransformed={isMenuOpened} onClick={toggleMenu} />

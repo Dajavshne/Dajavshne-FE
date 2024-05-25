@@ -34,6 +34,10 @@ const config: Config = {
         4: '4px',
         10: '10px',
       },
+      fontFamily: {
+        'open-sans': ['var(--font-open-sans)'],
+        arimo: ['var(--font-arimo)'],
+      },
     },
   },
   plugins: [],
