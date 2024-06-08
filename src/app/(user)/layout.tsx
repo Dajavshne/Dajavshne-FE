@@ -4,6 +4,8 @@ import { ReactNode } from 'react';
 
 import LogoIcon from '@/icons/LogoIcon';
 
+import Wrapper from './wrapper';
+
 import '../globals.css';
 
 export default function UserLayout({
@@ -29,7 +31,7 @@ export default function UserLayout({
           </div>
         </div>
         <div className="w-full px-4 lg:w-2/5 lg:px-14 2xl:px-desktop">
-          {children}
+          <Wrapper>{children}</Wrapper>
         </div>
       </div>
     </main>

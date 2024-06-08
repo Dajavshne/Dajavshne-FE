@@ -1,5 +1,5 @@
 import AboutUs from './components/AboutUs';
-import BecomePartner from './components/BecomePartner';
+import BecomePartner from './components/BecomePartner/BecomePartner';
 import Slider from './components/Slider';
 import TopWashingCenters from './components/TopWashingCenters';
 

@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Button from '@/app/components/Button';
 import StarIcon from '@/icons/StarIcon';
 
 const TopWashingCenters = () => {
@@ -40,9 +39,9 @@ const TopWashingCenters = () => {
             </div>
           </div>
           <div className="px-4 pb-4 pt-6">
-            <Button type="link" to="/" className="w-full">
+            <Link href="/" className="btn btn-primary w-full">
               Book now
-            </Button>
+            </Link>
           </div>
         </div>
         <div className="flex min-w-[265px] flex-col justify-between overflow-hidden rounded-10 border border-gray/30">
@@ -71,9 +70,9 @@ const TopWashingCenters = () => {
             </div>
           </div>
           <div className="px-4 pb-4 pt-6">
-            <Button type="link" to="/" className="w-full">
+            <Link href="/" className="btn btn-primary w-full">
               Book now
-            </Button>
+            </Link>
           </div>
         </div>
         <div className="flex min-w-[265px] flex-col justify-between overflow-hidden rounded-10 border border-gray/30">
@@ -100,9 +99,9 @@ const TopWashingCenters = () => {
             </div>
           </div>
           <div className="px-4 pb-4 pt-6">
-            <Button type="link" to="/" className="w-full">
+            <Link href="/" className="btn btn-primary w-full">
               Book now
-            </Button>
+            </Link>
           </div>
         </div>
         <div className="flex min-w-[265px] flex-col justify-between overflow-hidden rounded-10 border border-gray/30">
@@ -131,9 +130,9 @@ const TopWashingCenters = () => {
             </div>
           </div>
           <div className="px-4 pb-4 pt-6">
-            <Button type="link" to="/" className="w-full">
+            <Link href="/" className="btn btn-primary w-full">
               Book now
-            </Button>
+            </Link>
           </div>
         </div>
       </div>

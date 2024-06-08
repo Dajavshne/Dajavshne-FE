@@ -1,31 +1,42 @@
 import Link from 'next/link';
 
-import EmailIcon from '@/icons/EmailIcon';
-import FacebookIcon from '@/icons/FacebookIcon';
-import InstagramIcon from '@/icons/InstagramIcon';
-import LogoIcon from '@/icons/LogoIcon';
+import Icon from '@/icons/Icon';
 
 const Footer = () => {
   return (
     <footer className="bg-primary">
       <div className="mx-auto max-w-1920 px-4 py-6 md:px-6 2xl:px-desktop 2xl:pb-8 2xl:pt-14">
         <div className="flex flex-col items-start gap-y-9 md:flex-row md:gap-x-32">
-          <LogoIcon className="h-5 w-[127px] lg:h-auto lg:w-52 [&>path]:fill-beige" />
+          <Icon
+            type="LogoIcon"
+            className="h-5 w-[127px] lg:h-auto lg:w-52 [&>path]:fill-beige"
+          />
           <div>
             <p className="text-lg font-bold text-beige md:text-xl">Contact</p>
             <div className="mt-6 flex flex-col gap-4 text-sm text-beige md:text-base">
-              <div className="flex items-center gap-3">
-                <EmailIcon />
+              <Link
+                href="mailto:info@dajavshne.com"
+                className="flex items-center gap-3"
+              >
+                <Icon type="EmailIcon" />
                 <span>Info@dajavshne.com</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <FacebookIcon />
+              </Link>
+              <Link
+                href="https://facebook.com/dajavshne"
+                target="_blank"
+                className="flex items-center gap-3"
+              >
+                <Icon type="FacebookIcon" />
                 <span>Facebook.com/dajavshne</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <InstagramIcon />
+              </Link>
+              <Link
+                href="https://instagram.com/dajavshne"
+                target="_blank"
+                className="flex items-center gap-3"
+              >
+                <Icon type="InstagramIcon" />
                 <span>Instagram.com/dajavshne</span>
-              </div>
+              </Link>
             </div>
           </div>
           <div>
@@ -40,7 +51,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="font-arimo mt-14 text-sm text-beige md:mt-16 lg:text-xl xl:mt-24">
+        <p className="mt-14 font-arimo text-sm text-beige md:mt-16 lg:text-xl xl:mt-24">
           &copy; 2023 DAJAVSHNE. ყველა უფლება დაცულია.{' '}
         </p>
       </div>

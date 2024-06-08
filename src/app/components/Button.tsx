@@ -10,7 +10,8 @@ interface ButtonBaseProps {
 interface ButtonProps extends ButtonBaseProps {
   type: 'button';
   onClick: () => void;
-  buttonType?: string;
+  buttonType?: 'button' | 'reset' | 'submit';
+  disabled?: boolean;
 }
 
 interface LinkButtonProps extends ButtonBaseProps {
@@ -37,9 +38,12 @@ const Button = (props: ButtonProps | LinkButtonProps) => {
     );
   }
 
+  const { buttonType = 'button', disabled } = props;
+
   return (
     <button
-      type="button"
+      disabled={disabled}
+      type={buttonType}
       className={twMerge(
         'inline-block rounded bg-primary p-5 text-center text-sm font-bold text-white',
         className,

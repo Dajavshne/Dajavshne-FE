@@ -10,6 +10,15 @@ h3 {
     @apply text-lg font-bold md:text-[28px] md:leading-10;
 }
 
+.btn {
+    @apply inline-block rounded p-5 text-center text-sm font-bold border duration-300;
+    @apply disabled:opacity-70 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+    @apply bg-primary text-white border-none;
+}
+
 .splide {
     visibility: visible !important;
 }

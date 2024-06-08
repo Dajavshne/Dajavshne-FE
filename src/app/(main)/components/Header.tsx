@@ -6,10 +6,9 @@ import { createPortal } from 'react-dom';
 import { twJoin } from 'tailwind-merge';
 
 import BurgerIcon from '@/app/components/BurgerIcon';
-import Button from '@/app/components/Button';
 import NavLink from '@/app/components/NavLink';
 import useWindowSize from '@/app/hooks/useWindowSize';
-import LogoIcon from '@/icons/LogoIcon';
+import Icon from '@/icons/Icon';
 
 const Header = () => {
   const [isOverlayVisible, setIsOverlayVisible] = useState<boolean>(false);
@@ -28,7 +27,7 @@ const Header = () => {
   const renderLogo = () => {
     return (
       <Link href="/">
-        <LogoIcon className="h-5 w-[127px] lg:h-auto lg:w-52" />
+        <Icon type="LogoIcon" className="h-5 w-[127px] lg:h-auto lg:w-52" />
       </Link>
     );
   };
@@ -58,9 +57,9 @@ const Header = () => {
         <Link className="text-center text-sm font-semibold" href={'/sign-in'}>
           Sign in
         </Link>
-        <Button type="link" to="/register">
+        <Link href="/sign-up" className="btn btn-primary">
           Create account
-        </Button>
+        </Link>
       </>
     );
   };
@@ -97,7 +96,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-10 mx-auto flex max-w-1920 items-center justify-between bg-white px-4 py-5 md:px-6 lg:relative lg:py-10 2xl:px-desktop">
+    <header className="sticky top-0 z-20 mx-auto flex max-w-1920 items-center justify-between bg-white px-4 py-5 md:px-6 lg:relative lg:py-10 2xl:px-desktop">
       {renderLogo()}
       {!isDesktopMenu && (
         <BurgerIcon isTransformed={isMenuOpened} onClick={toggleMenu} />

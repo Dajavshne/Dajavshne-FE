@@ -5,8 +5,7 @@ import '@splidejs/react-splide/css';
 // @ts-ignore
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Image from 'next/image';
-
-import Button from '@/app/components/Button';
+import Link from 'next/link';
 
 const originalContent = [
   {
@@ -75,9 +74,9 @@ const Slider = () => {
                     <p className="mt-3 max-w-[436px] text-sm leading-[26px]">
                       {smallText}
                     </p>
-                    <Button type="link" to="/" className="mt-8">
+                    <Link href="/" className="btn btn-primary mt-8">
                       Book now
-                    </Button>
+                    </Link>
                   </div>
                 </div>
               </SplideSlide>
