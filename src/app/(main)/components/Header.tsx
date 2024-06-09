@@ -96,7 +96,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-20 mx-auto flex max-w-1920 items-center justify-between bg-white px-4 py-5 md:px-6 lg:relative lg:py-10 2xl:px-desktop">
+    <header className="sticky top-0 z-20 mx-auto flex w-full max-w-1920 items-center justify-between bg-white px-4 py-5 md:px-6 lg:relative lg:py-10 2xl:px-desktop">
       {renderLogo()}
       {!isDesktopMenu && (
         <BurgerIcon isTransformed={isMenuOpened} onClick={toggleMenu} />

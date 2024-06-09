@@ -28,7 +28,7 @@ export default function RootLayout({
           openSans.variable,
           arimo.variable,
           openSans.className,
-          'w-screen overflow-x-hidden',
+          'flex min-h-screen w-screen flex-col justify-between overflow-x-hidden',
         )}
       >
         {children}

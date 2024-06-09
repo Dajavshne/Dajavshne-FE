@@ -4,7 +4,7 @@ import Icon from '@/icons/Icon';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary">
+    <footer className="mt-6 bg-primary lg:mt-18">
       <div className="mx-auto max-w-1920 px-4 py-6 md:px-6 2xl:px-desktop 2xl:pb-8 2xl:pt-14">
         <div className="flex flex-col items-start gap-y-9 md:flex-row md:gap-x-32">
           <Icon
@@ -47,7 +47,7 @@ const Footer = () => {
               <Link href={'/'}>Home</Link>
               <Link href={'/'}>Booking car-wash</Link>
               <Link href={'/'}>Become partner</Link>
-              <Link href={'/'}>F.A.Q</Link>
+              <Link href="/faq">F.A.Q</Link>
             </div>
           </div>
         </div>

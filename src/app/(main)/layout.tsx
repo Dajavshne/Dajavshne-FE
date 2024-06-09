@@ -17,7 +17,7 @@ export default function MainLayout({
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className="mt-4 grow lg:mt-8">{children}</main>
       <Footer />
     </>
   );

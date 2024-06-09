@@ -7,8 +7,12 @@ import FacebookIcon from './FacebookIcon';
 import { IconProps } from './IconTypes';
 import InstagramIcon from './InstagramIcon';
 import LogoIcon from './LogoIcon';
+import MinusCircleIcon from './MinusCircleIcon';
+import PlusCircleIcon from './PlusCircleIcon';
 
 export type IconType =
+  | 'MinusCircleIcon'
+  | 'PlusCircleIcon'
   | 'ArrowBackIcon'
   | 'EyeIcon'
   | 'CrossedEyeIcon'
@@ -19,6 +23,8 @@ export type IconType =
   | 'LogoIcon';
 
 const iconMap = {
+  MinusCircleIcon,
+  PlusCircleIcon,
   ArrowBackIcon,
   EyeIcon,
   CrossedEyeIcon,

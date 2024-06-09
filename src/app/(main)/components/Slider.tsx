@@ -36,7 +36,7 @@ const originalContent = [
 
 const Slider = () => {
   return (
-    <section className="mt-4 px-4 md:px-6 lg:mt-8 2xl:px-desktop">
+    <section className="px-4 md:px-6 2xl:px-desktop">
       <div className="relative overflow-hidden rounded-xl">
         <Splide
           options={{
