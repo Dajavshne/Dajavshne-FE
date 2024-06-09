@@ -12,7 +12,7 @@ h3 {
 
 .btn {
     @apply inline-block rounded p-5 text-center text-sm font-bold border duration-300;
-    @apply disabled:opacity-70 disabled:cursor-not-allowed;
+    @apply disabled:opacity-60 disabled:cursor-not-allowed;
 }
 
 .btn-primary {

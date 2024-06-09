@@ -60,6 +60,7 @@ const SignInForm = () => {
               <div>
                 <div className="relative">
                   <Label
+                    withIcon
                     htmlFor="email"
                     isMovedUp={!!values.email || activeField === 'email'}
                   >
@@ -72,6 +73,7 @@ const SignInForm = () => {
                     value={values.email}
                     error={!!errors.email && !!touched.email}
                     success={!errors.email && !!touched.email}
+                    iconType="EmailIcon"
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onBlur={(e) => {
@@ -87,6 +89,7 @@ const SignInForm = () => {
               <div>
                 <div className="relative">
                   <Label
+                    withIcon
                     htmlFor="password"
                     isMovedUp={!!values.password || activeField === 'password'}
                   >
@@ -99,6 +102,7 @@ const SignInForm = () => {
                     value={values.password}
                     error={!!errors.password && !!touched.password}
                     success={!errors.password && !!touched.password}
+                    iconType="LockIcon"
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onBlur={(e) => {

@@ -73,6 +73,7 @@ const RegisterForm = () => {
               <div>
                 <div className="relative">
                   <Label
+                    withIcon
                     htmlFor="full_name"
                     isMovedUp={
                       !!values.full_name || activeField === 'full_name'
@@ -87,6 +88,7 @@ const RegisterForm = () => {
                     value={values.full_name}
                     error={!!errors.full_name && !!touched.full_name}
                     success={!errors.full_name && !!touched.full_name}
+                    iconType="UserIcon"
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onBlur={(e) => {
@@ -102,6 +104,7 @@ const RegisterForm = () => {
               <div>
                 <div className="relative">
                   <Label
+                    withIcon
                     htmlFor="email"
                     isMovedUp={!!values.email || activeField === 'email'}
                   >
@@ -114,6 +117,7 @@ const RegisterForm = () => {
                     value={values.email}
                     error={!!errors.email && !!touched.email}
                     success={!errors.email && !!touched.email}
+                    iconType="EmailIcon"
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onBlur={(e) => {
@@ -129,6 +133,7 @@ const RegisterForm = () => {
               <div>
                 <div className="relative">
                   <Label
+                    withIcon
                     htmlFor="phone"
                     isMovedUp={!!values.phone || activeField === 'phone'}
                   >
@@ -141,6 +146,7 @@ const RegisterForm = () => {
                     value={values.phone}
                     error={!!errors.phone && !!touched.phone}
                     success={!errors.phone && !!touched.phone}
+                    iconType="PhoneIcon"
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onBlur={(e) => {
@@ -156,6 +162,7 @@ const RegisterForm = () => {
               <div>
                 <div className="relative">
                   <Label
+                    withIcon
                     htmlFor="car_type"
                     isMovedUp={!!values.car_type || activeField === 'car_type'}
                   >
@@ -166,8 +173,7 @@ const RegisterForm = () => {
                     name="car_type"
                     type="text"
                     value={values.car_type}
-                    error={!!errors.car_type && !!touched.car_type}
-                    success={!errors.car_type && !!touched.car_type}
+                    iconType="CarIcon"
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onBlur={(e) => {
@@ -183,6 +189,7 @@ const RegisterForm = () => {
               <div>
                 <div className="relative">
                   <Label
+                    withIcon
                     htmlFor="car_series"
                     isMovedUp={
                       !!values.car_series || activeField === 'car_series'
@@ -195,8 +202,7 @@ const RegisterForm = () => {
                     name="car_series"
                     type="text"
                     value={values.car_series}
-                    error={!!errors.car_series && !!touched.car_series}
-                    success={!errors.car_series && !!touched.car_series}
+                    iconType="CarIcon"
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onBlur={(e) => {
@@ -212,6 +218,7 @@ const RegisterForm = () => {
               <div>
                 <div className="relative">
                   <Label
+                    withIcon
                     htmlFor="password"
                     isMovedUp={!!values.password || activeField === 'password'}
                   >
@@ -224,6 +231,7 @@ const RegisterForm = () => {
                     value={values.password}
                     error={!!errors.password && !!touched.password}
                     success={!errors.password && !!touched.password}
+                    iconType="LockIcon"
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onBlur={(e) => {
@@ -239,6 +247,7 @@ const RegisterForm = () => {
               <div>
                 <div className="relative">
                   <Label
+                    withIcon
                     htmlFor="confirm_password"
                     isMovedUp={
                       !!values.confirm_password ||
@@ -252,6 +261,7 @@ const RegisterForm = () => {
                     name="confirm_password"
                     type="password"
                     value={values.confirm_password}
+                    iconType="LockIcon"
                     error={
                       !!errors.confirm_password && !!touched.confirm_password
                     }

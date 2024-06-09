@@ -18,7 +18,9 @@ const config: Config = {
         18: '72px',
       },
       padding: {
+        13: '52px',
         18: '72px',
+        25: '100px',
         desktop: '150px',
       },
       overflow: {
@@ -37,6 +39,10 @@ const config: Config = {
       fontFamily: {
         'open-sans': ['var(--font-open-sans)'],
         arimo: ['var(--font-arimo)'],
+      },
+      inset: {
+        13: '52px',
+        25: '100px',
       },
     },
   },

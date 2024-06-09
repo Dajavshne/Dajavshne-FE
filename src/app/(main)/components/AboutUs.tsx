@@ -12,6 +12,7 @@ const AboutUs = () => {
             src={CarWashingImage}
             alt="Car washing"
             className="rounded-10"
+            placeholder="blur"
           />
         </div>
         <div className="w-full lg:w-5/12">
