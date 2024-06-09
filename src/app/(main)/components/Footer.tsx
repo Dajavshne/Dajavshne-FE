@@ -1,15 +1,17 @@
+import Image from 'next/image';
 import Link from 'next/link';
-
-import Icon from '@/icons/Icon';
 
 const Footer = () => {
   return (
     <footer className="mt-6 bg-primary lg:mt-18">
       <div className="mx-auto max-w-1920 px-4 py-6 md:px-6 2xl:px-desktop 2xl:pb-8 2xl:pt-14">
         <div className="flex flex-col items-start gap-y-9 md:flex-row md:gap-x-32">
-          <Icon
-            type="LogoIcon"
-            className="h-5 w-[127px] lg:h-auto lg:w-52 [&>path]:fill-beige"
+          <Image
+            width={208}
+            height={34}
+            src="/images/logo-beige.svg"
+            alt="Dajavshne"
+            className="h-5 w-[127px] lg:h-auto lg:w-52"
           />
           <div>
             <p className="text-lg font-bold text-beige md:text-xl">Contact</p>
@@ -18,7 +20,7 @@ const Footer = () => {
                 href="mailto:info@dajavshne.com"
                 className="flex items-center gap-3"
               >
-                <Icon type="EmailIcon" />
+                <Image width={24} height={24} src="/icons/email.svg" alt="" />
                 <span>Info@dajavshne.com</span>
               </Link>
               <Link
@@ -26,7 +28,12 @@ const Footer = () => {
                 target="_blank"
                 className="flex items-center gap-3"
               >
-                <Icon type="FacebookIcon" />
+                <Image
+                  width={24}
+                  height={24}
+                  src="/icons/facebook.svg"
+                  alt=""
+                />
                 <span>Facebook.com/dajavshne</span>
               </Link>
               <Link
@@ -34,7 +41,12 @@ const Footer = () => {
                 target="_blank"
                 className="flex items-center gap-3"
               >
-                <Icon type="InstagramIcon" />
+                <Image
+                  width={24}
+                  height={24}
+                  src="/icons/instagram.svg"
+                  alt=""
+                />
                 <span>Instagram.com/dajavshne</span>
               </Link>
             </div>

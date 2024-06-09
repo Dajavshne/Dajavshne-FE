@@ -2,8 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
-import LogoIcon from '@/icons/LogoIcon';
-
 import Wrapper from './wrapper';
 
 import '../globals.css';
@@ -26,7 +24,14 @@ export default function UserLayout({
           />
           <div className="flex size-full items-center justify-center bg-black/30">
             <Link href="/" className="h-auto w-2/5">
-              <LogoIcon className="h-auto w-full [&>path]:fill-beige" />
+              <Image
+                priority
+                width={470}
+                height={74}
+                src="/images/logo-beige.svg"
+                alt="Dajavshne"
+                className="h-auto w-full"
+              />
             </Link>
           </div>
         </div>

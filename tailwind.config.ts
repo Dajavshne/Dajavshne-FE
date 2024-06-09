@@ -28,7 +28,7 @@ const config: Config = {
         grayishBlue: 'rgb(193, 217, 225)',
       },
       backgroundImage: {
-        looper: 'url("/LooperGroup.svg")',
+        looper: 'url("/images/looper-group.svg")',
         'car-tyre': 'url("/images/car-tyre-wash.jpeg")',
       },
       borderRadius: {

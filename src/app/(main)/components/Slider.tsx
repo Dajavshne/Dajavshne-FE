@@ -9,25 +9,25 @@ import Link from 'next/link';
 
 const originalContent = [
   {
-    imageSrc: '/slide.png',
+    imageSrc: '/images/slide.png',
     bigText: `1 Don't let dirt steal your car's shine. Get a wash now!`,
     smallText: `Quick as a flash! Get a sparkling clean car without the wait. Limited-time offer! Book
     your wash and save.`,
   },
   {
-    imageSrc: '/slide.png',
+    imageSrc: '/images/slide.png',
     bigText: `2 Don't let dirt steal your car's shine. Get a wash now!`,
     smallText: `Quick as a flash! Get a sparkling clean car without the wait. Limited-time offer! Book
     your wash and save.`,
   },
   {
-    imageSrc: '/slide.png',
+    imageSrc: '/images/slide.png',
     bigText: `3 Don't let dirt steal your car's shine. Get a wash now!`,
     smallText: `Quick as a flash! Get a sparkling clean car without the wait. Limited-time offer! Book
     your wash and save.`,
   },
   {
-    imageSrc: '/slide.png',
+    imageSrc: '/images/slide.png',
     bigText: `4 Don't let dirt steal your car's shine. Get a wash now!`,
     smallText: `Quick as a flash! Get a sparkling clean car without the wait. Limited-time offer! Book
     your wash and save.`,

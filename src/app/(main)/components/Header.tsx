@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -8,7 +9,6 @@ import { twJoin } from 'tailwind-merge';
 import BurgerIcon from '@/app/components/BurgerIcon';
 import NavLink from '@/app/components/NavLink';
 import useWindowSize from '@/app/hooks/useWindowSize';
-import Icon from '@/icons/Icon';
 
 const Header = () => {
   const [isOverlayVisible, setIsOverlayVisible] = useState<boolean>(false);
@@ -27,7 +27,14 @@ const Header = () => {
   const renderLogo = () => {
     return (
       <Link href="/">
-        <Icon type="LogoIcon" className="h-5 w-[127px] lg:h-auto lg:w-52" />
+        <Image
+          priority
+          width={208}
+          height={34}
+          src="/images/logo.svg"
+          alt="Dajavshne"
+          className="h-5 w-[127px] lg:h-auto lg:w-52"
+        />
       </Link>
     );
   };

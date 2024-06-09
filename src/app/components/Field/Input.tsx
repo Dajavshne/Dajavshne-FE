@@ -1,9 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { InputHTMLAttributes, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-
-import Icon from '@/icons/Icon';
 
 const Input = (
   props: InputHTMLAttributes<HTMLInputElement> & {
@@ -33,9 +32,11 @@ const Input = (
           className="absolute right-3 top-1/2 -translate-y-1/2"
           onClick={() => setIsPasswordVisible(!isPasswordVisible)}
         >
-          <Icon
-            type={isPasswordVisible ? 'CrossedEyeIcon' : 'EyeIcon'}
-            className="size-6"
+          <Image
+            width={24}
+            height={24}
+            src={`/icons/${isPasswordVisible ? 'crossed-eye.svg' : 'visible-eye.svg'}`}
+            alt={isPasswordVisible ? 'Hide password' : 'Show Password'}
           />
         </button>
       )}

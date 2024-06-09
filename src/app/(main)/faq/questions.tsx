@@ -1,9 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import { twJoin } from 'tailwind-merge';
-
-import Icon from '@/icons/Icon';
 
 const Questions = () => {
   const [expandedQuestion, setExpandedQuestion] = useState('0');
@@ -21,11 +20,12 @@ const Questions = () => {
             <span className="text-left text-lg font-bold lg:text-xl">
               Is there a free trial available ?
             </span>
-            <Icon
+            <Image
+              width={32}
+              height={32}
+              src={`/icons/${expandedQuestion === '1' ? 'minus-circle.svg' : 'plus-circle.svg'}`}
+              alt={expandedQuestion === '1' ? 'Collapse' : 'Expand'}
               className="mt-[2px] size-6 lg:size-8"
-              type={
-                expandedQuestion === '1' ? 'PlusCircleIcon' : 'MinusCircleIcon'
-              }
             />
           </button>
           <div
@@ -53,11 +53,12 @@ const Questions = () => {
             <span className="text-left text-lg font-bold lg:text-xl">
               Can i change my plan later ?
             </span>
-            <Icon
+            <Image
+              width={32}
+              height={32}
+              src={`icons/${expandedQuestion === '2' ? 'minus-circle.svg' : 'plus-circle.svg'}`}
+              alt={expandedQuestion === '2' ? 'Collapse' : 'Expand'}
               className="mt-[2px] size-6 lg:size-8"
-              type={
-                expandedQuestion === '2' ? 'PlusCircleIcon' : 'MinusCircleIcon'
-              }
             />
           </button>
           <div
@@ -85,11 +86,12 @@ const Questions = () => {
             <span className="text-left text-lg font-bold lg:text-xl">
               What is your collection policy ?
             </span>
-            <Icon
+            <Image
+              width={32}
+              height={32}
+              src={`icons/${expandedQuestion === '3' ? 'minus-circle.svg' : 'plus-circle.svg'}`}
+              alt={expandedQuestion === '3' ? 'Collapse' : 'Expand'}
               className="mt-[2px] size-6 lg:size-8"
-              type={
-                expandedQuestion === '3' ? 'PlusCircleIcon' : 'MinusCircleIcon'
-              }
             />
           </button>
           <div
