@@ -4,6 +4,9 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { twJoin } from 'tailwind-merge';
 
+import MinusCircleIcon from '/public/icons/minus-circle.svg';
+import PlusCircleIcon from '/public/icons/plus-circle.svg';
+
 const Questions = () => {
   const [expandedQuestion, setExpandedQuestion] = useState('0');
 
@@ -21,9 +24,7 @@ const Questions = () => {
               Is there a free trial available ?
             </span>
             <Image
-              width={32}
-              height={32}
-              src={`/icons/${expandedQuestion === '1' ? 'minus-circle.svg' : 'plus-circle.svg'}`}
+              src={expandedQuestion === '1' ? MinusCircleIcon : PlusCircleIcon}
               alt={expandedQuestion === '1' ? 'Collapse' : 'Expand'}
               className="mt-[2px] size-6 lg:size-8"
             />
@@ -54,9 +55,7 @@ const Questions = () => {
               Can i change my plan later ?
             </span>
             <Image
-              width={32}
-              height={32}
-              src={`icons/${expandedQuestion === '2' ? 'minus-circle.svg' : 'plus-circle.svg'}`}
+              src={expandedQuestion === '2' ? MinusCircleIcon : PlusCircleIcon}
               alt={expandedQuestion === '2' ? 'Collapse' : 'Expand'}
               className="mt-[2px] size-6 lg:size-8"
             />
@@ -87,9 +86,7 @@ const Questions = () => {
               What is your collection policy ?
             </span>
             <Image
-              width={32}
-              height={32}
-              src={`icons/${expandedQuestion === '3' ? 'minus-circle.svg' : 'plus-circle.svg'}`}
+              src={expandedQuestion === '3' ? MinusCircleIcon : PlusCircleIcon}
               alt={expandedQuestion === '3' ? 'Collapse' : 'Expand'}
               className="mt-[2px] size-6 lg:size-8"
             />

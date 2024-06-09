@@ -29,7 +29,6 @@ const config: Config = {
       },
       backgroundImage: {
         looper: 'url("/images/looper-group.svg")',
-        'car-tyre': 'url("/images/car-tyre-wash.jpeg")',
       },
       borderRadius: {
         4: '4px',

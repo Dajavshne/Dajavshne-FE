@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import WashingCenterImage from '/public/images/washing-center.jpeg';
 import StarIcon from '@/icons/StarIcon';
 
 const TopWashingCenters = () => {
@@ -16,9 +17,8 @@ const TopWashingCenters = () => {
         <div className="flex min-w-[265px] flex-col justify-between overflow-hidden rounded-10 border border-gray/30">
           <div>
             <Image
-              src={'/images/washing-center.jpeg'}
-              width={391}
-              height={243}
+              src={WashingCenterImage}
+              placeholder="blur"
               alt="Washing center"
             />
             <div className="px-4 pt-4">
@@ -47,9 +47,8 @@ const TopWashingCenters = () => {
         <div className="flex min-w-[265px] flex-col justify-between overflow-hidden rounded-10 border border-gray/30">
           <div>
             <Image
-              src={'/images/washing-center.jpeg'}
-              width={391}
-              height={243}
+              src={WashingCenterImage}
+              placeholder="blur"
               alt="Washing center"
             />
             <div className="px-4 pt-4">
@@ -78,9 +77,8 @@ const TopWashingCenters = () => {
         <div className="flex min-w-[265px] flex-col justify-between overflow-hidden rounded-10 border border-gray/30">
           <div>
             <Image
-              src={'/images/washing-center.jpeg'}
-              width={391}
-              height={243}
+              src={WashingCenterImage}
+              placeholder="blur"
               alt="Washing center"
             />
             <div className="px-4 pt-4">
@@ -107,9 +105,8 @@ const TopWashingCenters = () => {
         <div className="flex min-w-[265px] flex-col justify-between overflow-hidden rounded-10 border border-gray/30">
           <div>
             <Image
-              src={'/images/washing-center.jpeg'}
-              width={391}
-              height={243}
+              src={WashingCenterImage}
+              placeholder="blur"
               alt="Washing center"
             />
             <div className="px-4 pt-4">

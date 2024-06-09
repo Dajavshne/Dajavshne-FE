@@ -1,15 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Email from '/public/icons/email.svg';
+import Facebook from '/public/icons/facebook.svg';
+import Instagram from '/public/icons/instagram.svg';
+import LogoBeige from '/public/images/logo-beige.svg';
+
 const Footer = () => {
   return (
     <footer className="mt-6 bg-primary lg:mt-18">
       <div className="mx-auto max-w-1920 px-4 py-6 md:px-6 2xl:px-desktop 2xl:pb-8 2xl:pt-14">
         <div className="flex flex-col items-start gap-y-9 md:flex-row md:gap-x-32">
           <Image
-            width={208}
-            height={34}
-            src="/images/logo-beige.svg"
+            src={LogoBeige}
             alt="Dajavshne"
             className="h-5 w-[127px] lg:h-auto lg:w-52"
           />
@@ -20,7 +23,7 @@ const Footer = () => {
                 href="mailto:info@dajavshne.com"
                 className="flex items-center gap-3"
               >
-                <Image width={24} height={24} src="/icons/email.svg" alt="" />
+                <Image src={Email} alt="" />
                 <span>Info@dajavshne.com</span>
               </Link>
               <Link
@@ -28,12 +31,7 @@ const Footer = () => {
                 target="_blank"
                 className="flex items-center gap-3"
               >
-                <Image
-                  width={24}
-                  height={24}
-                  src="/icons/facebook.svg"
-                  alt=""
-                />
+                <Image src={Facebook} alt="" />
                 <span>Facebook.com/dajavshne</span>
               </Link>
               <Link
@@ -41,12 +39,7 @@ const Footer = () => {
                 target="_blank"
                 className="flex items-center gap-3"
               >
-                <Image
-                  width={24}
-                  height={24}
-                  src="/icons/instagram.svg"
-                  alt=""
-                />
+                <Image src={Instagram} alt="" />
                 <span>Instagram.com/dajavshne</span>
               </Link>
             </div>

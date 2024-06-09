@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { twJoin } from 'tailwind-merge';
 
+import Logo from '/public/images/logo.svg';
 import BurgerIcon from '@/app/components/BurgerIcon';
 import NavLink from '@/app/components/NavLink';
 import useWindowSize from '@/app/hooks/useWindowSize';
@@ -29,9 +30,7 @@ const Header = () => {
       <Link href="/">
         <Image
           priority
-          width={208}
-          height={34}
-          src="/images/logo.svg"
+          src={Logo}
           alt="Dajavshne"
           className="h-5 w-[127px] lg:h-auto lg:w-52"
         />

@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { ReactNode } from 'react';
 
+import ArrowBack from '/public/icons/arrow-back.svg';
+
 const Wrapper = ({
   children,
 }: Readonly<{
@@ -17,12 +19,7 @@ const Wrapper = ({
         className="mb-4 flex items-center gap-2"
         onClick={() => router.back()}
       >
-        <Image
-          width={24}
-          height={24}
-          src="/icons/arrow-back.svg"
-          alt="Go back"
-        />
+        <Image src={ArrowBack} alt="Go back" />
         Back
       </button>
       {children}

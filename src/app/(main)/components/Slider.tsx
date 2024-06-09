@@ -7,27 +7,29 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import SlideImage from '/public/images/slide.png';
+
 const originalContent = [
   {
-    imageSrc: '/images/slide.png',
+    image: SlideImage,
     bigText: `1 Don't let dirt steal your car's shine. Get a wash now!`,
     smallText: `Quick as a flash! Get a sparkling clean car without the wait. Limited-time offer! Book
     your wash and save.`,
   },
   {
-    imageSrc: '/images/slide.png',
+    image: SlideImage,
     bigText: `2 Don't let dirt steal your car's shine. Get a wash now!`,
     smallText: `Quick as a flash! Get a sparkling clean car without the wait. Limited-time offer! Book
     your wash and save.`,
   },
   {
-    imageSrc: '/images/slide.png',
+    image: SlideImage,
     bigText: `3 Don't let dirt steal your car's shine. Get a wash now!`,
     smallText: `Quick as a flash! Get a sparkling clean car without the wait. Limited-time offer! Book
     your wash and save.`,
   },
   {
-    imageSrc: '/images/slide.png',
+    image: SlideImage,
     bigText: `4 Don't let dirt steal your car's shine. Get a wash now!`,
     smallText: `Quick as a flash! Get a sparkling clean car without the wait. Limited-time offer! Book
     your wash and save.`,
@@ -54,17 +56,15 @@ const Slider = () => {
             },
           }}
         >
-          {originalContent.map(({ imageSrc, bigText, smallText }, index) => {
+          {originalContent.map(({ image, bigText, smallText }, index) => {
             return (
               <SplideSlide key={index} className="relative w-full">
                 <Image
                   priority
-                  src={imageSrc}
+                  src={image}
                   alt="slide"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
                   className="h-[314px] w-full object-cover md:h-96 xl:h-[540px]"
+                  placeholder="blur"
                 />
                 <div className="absolute left-0 top-0 flex size-full flex-col justify-between pl-4 pr-8 pt-6 text-white md:pl-8 md:pt-10 xl:px-12 xl:pt-[138px]">
                   <div>
