@@ -44,6 +44,15 @@ const config: Config = {
         13: '52px',
         25: '100px',
       },
+      keyframes: {
+        blink: {
+          '0%, 100%': { opacity: '100%' },
+          '50%': { opacity: '0%' },
+        },
+      },
+      animation: {
+        blink: 'blink 200ms linear',
+      },
     },
   },
   plugins: [],

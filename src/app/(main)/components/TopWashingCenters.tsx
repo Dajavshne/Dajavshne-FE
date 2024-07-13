@@ -39,7 +39,7 @@ const TopWashingCenters = () => {
             </div>
           </div>
           <div className="px-4 pb-4 pt-6">
-            <Link href="/" className="btn btn-primary w-full">
+            <Link href="/details" className="btn btn-primary w-full">
               Book now
             </Link>
           </div>
