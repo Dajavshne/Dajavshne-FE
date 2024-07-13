@@ -110,6 +110,51 @@ export default function Details() {
           </Link>
         </div>
       </div>
+      <h4 className="mt-6 text-lg font-bold md:text-[28px] md:leading-10 xl:mt-18">
+        Saburtalo car-wash feedbacks
+      </h4>
+      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+        {Array.from({ length: 8 }, (_, index) => index + 1).map((idx) => {
+          const ratingScore = +(Math.random() * 5).toFixed(1);
+
+          return (
+            <div key={idx} className="rounded-10 border border-gray/30">
+              <div>
+                <div className="px-4 pb-8 pt-4">
+                  <div className="flex items-center gap-4">
+                    <div className="size-24 rounded-full bg-pink-500" />
+                    <span className="text-lg font-bold xl:text-2xl">
+                      Luka Kalatozi
+                    </span>
+                  </div>
+                  <p className="font-poppins mt-4 text-sm leading-7 md:text-base md:leading-7">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 border-t border-gray/30 px-6 pb-6 pt-4">
+                {Array.from({ length: 5 }, (_, index) => index + 1).map(
+                  (idx) => {
+                    return (
+                      <div key={idx}>
+                        <StarIcon
+                          className="size-5 md:size-6"
+                          percent={(ratingScore + 1 - idx) * 100}
+                        />
+                      </div>
+                    );
+                  },
+                )}
+                <span className="text-lg font-bold xl:text-2xl">
+                  {ratingScore}
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }

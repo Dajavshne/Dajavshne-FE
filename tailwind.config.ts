@@ -39,6 +39,7 @@ const config: Config = {
       fontFamily: {
         'open-sans': ['var(--font-open-sans)'],
         arimo: ['var(--font-arimo)'],
+        poppins: ['var(--font-poppins)'],
       },
       inset: {
         13: '52px',

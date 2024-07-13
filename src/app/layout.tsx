@@ -1,4 +1,4 @@
-import { Arimo, Open_Sans } from 'next/font/google';
+import { Arimo, Open_Sans, Poppins } from 'next/font/google';
 import { ReactNode } from 'react';
 import { twJoin } from 'tailwind-merge';
 
@@ -16,6 +16,13 @@ const arimo = Arimo({
   variable: '--font-arimo',
 });
 
+const poppins = Poppins({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,6 +34,7 @@ export default function RootLayout({
         className={twJoin(
           openSans.variable,
           arimo.variable,
+          poppins.variable,
           openSans.className,
           'flex min-h-screen w-screen flex-col justify-between overflow-x-hidden',
         )}
